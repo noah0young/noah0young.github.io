@@ -1,4 +1,146 @@
+:root
+{
+    --fs-h1: 3rem;
+    --fs-h2: 2rem;
+    --fs-h3: 1.5rem;
+    --fs-body: 1rem;
+}
+
+@media (min-width: 800px) {
+    :root
+    {
+        --fs-h1: 3rem;
+        --fs-h2: 2rem;
+        --fs-h3: 1.5rem;
+        --fs-body: 1.25rem;
+
+        --background: rgb(250, 250, 250);
+        --background2:rgb(186, 20, 20);
+    }
+}
+
+body
+{
+    background: var(--background);
+    line-height: 1.5;
+}
+
+section
+{
+    padding: 10px;
+}
+
+section::after
+{
+    content: '';
+    display: block;
+    width: 95%;
+    margin: 30px 2.5% 5px;
+    height: 1px;
+    background: black;
+}
+
+h1,
+h2,
+h3
+{
+    line-height: 1.1;
+    margin: 0;
+}
+
+h1 { font-size: var(--fs-h1);}
+h2 { font-size: var(--fs-h2);}
+h3 { font-size: var(--fs-h3);}
+
+/* Title */
+
 .title
 {
-    font-size: 50;
+    padding-top: 30px;
+    font-size: 50px;
+    text-align: center;
+}
+
+.title::after
+{
+    content: '';
+    display: block;
+    width: 70%;
+    margin: 30px 15% 5px;
+    height: 1px;
+    background: black;
+}
+
+/* Bio Section */
+
+/*.bio-section
+{
+    background-color: rgb(240, 248, 255);
+    border-color: rgb(220, 228, 255);
+    border-radius: 5%;
+    border-style: solid;
+    border-width: 10px;
+}*/
+
+.bio-grid
+{
+    display: grid;
+    grid-template-areas: "img text";
+    grid-template-columns: 30% 60%;
+    column-gap: 10px;
+}
+
+.bio-image
+{
+    border-radius: 30%;
+    grid-area: img;
+    max-width: 100%;
+}
+
+.bio-text
+{
+    grid-area: text;
+    max-width: 100%;
+}
+
+/* Work Exp and Projects Section */
+
+/*.work-exp-section
+{
+    background-color: rgb(255, 240, 240);
+    border-color: rgb(255, 220, 220);
+    border-radius: 5%;
+    border-style: solid;
+    border-width: 10px;
+}*/
+
+.projects-grid,
+.work-exp-grid
+{
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    column-gap: 10px;
+}
+
+.projects-grid-element,
+.work-exp-grid-element
+{
+    height: 100%;
+    width: 100%;
+}
+
+.projects-grid-image,
+.work-exp-grid-image
+{
+    max-width: 90%;
+    transition: all 0.5s ease-in-out;
+}
+
+@media (hover : hover)
+{
+    .projects-grid-image:hover,
+    .work-exp-grid-image:hover
+    {
+        max-width: 100%;
+    }
 }

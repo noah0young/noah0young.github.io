@@ -1,16 +1,72 @@
 <!DOCTYPE html>
 <html>
+    <!-- Created by me with the help of tutorials -->
     <head>
         <title>Noah Young</title>
+        <meta name="viewport" content="width=width-device, inital-scale=1.0">
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <style>
-            .title
-            {
-                font-size: 50;
-            }
-        </style>
-        <header class="title">Noah Young</header>
+        <!-- Header (with my name) -->
+        <header>
+            <div>
+                <h1 class="title">Noah Young</h1>
+            </div>
+        </header>
+
+        <!-- Bio -->
+        <section id="Bio" class="bio-section">
+            <div class="bio-grid">
+                <img src="test.png" class="bio-image">
+                <div class="bio-text">
+                    <h2>About Me</h2>
+                    <p>
+                        Hi, my name is Noah. I’m a Computer Science student with a passion for making video games. Some of my interests are Fencing, Cooking, Food, and Board Games. Please feel free to check out the games published here. And I hope you enjoy the games.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Work Experience -->
+        <section id="WorkExperience" class="work-exp-section">
+            <h2>Work Experience</h2>
+            <div class="work-exp-grid">
+                <div class="work-exp-grid-element">
+                    <a href="./WorkExpPages/medtronic.html"><img src="./images/Medtronic.png" class="work-exp-grid-image"></a>
+                </div>
+                <div class="work-exp-grid-element">
+                    <a href="./WorkExpPages/stormflag.html"><img src="./images/StormFlagLogo.png" class="work-exp-grid-image"></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section id="Projects" class="projects-section">
+            <h2>Projects</h2>
+            <div class="projects-grid">
+                <div class="projects-grid-element">
+                    <a href="./projects/finely-tuned.html"><img src="./images/FinelyTuned.png" class="projects-grid-image"></a>
+                </div>
+                <div class="projects-grid-element">
+                    <a href="./projects/villain-heist.html"><img src="./images/VillainHeist.png" class="projects-grid-image"></a>
+                </div>
+                <div class="projects-grid-element">
+                    <a href="./projects/virus.html"><img src="./images/Virus.png" class="projects-grid-image"></a>
+                </div>
+                <div class="projects-grid-element">
+                    <a href="./projects/crescent-coast.html"><img src="./images/CrescentCoast.png" class="projects-grid-image"></a>
+                </div>
+            </div>
+        </section>
+
         <a href="page2.html">Next Page</a>
+
+
+
+
+        <input type="string" id="testInput" placeholder="Hello World">
+        <button id="printButton">Print</button>
+        <p>You entered: <output id="printVal"></output></p>
+        <script src="test.js"></script>
     </body>
 </html>
