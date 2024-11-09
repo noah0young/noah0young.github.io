@@ -71,6 +71,12 @@ h3 { font-size: var(--fs-h3);}
     background: black;
 }
 
+.subtitle
+{
+    padding: 5px;
+    text-align: center;
+}
+
 /* Bio Section */
 
 /*.bio-section
@@ -133,6 +139,8 @@ h3 { font-size: var(--fs-h3);}
 .work-exp-grid-image
 {
     max-width: 90%;
+    max-height: 90%;
+    padding: 5%;
     transition: all 0.5s ease-in-out;
 }
 
@@ -142,5 +150,14 @@ h3 { font-size: var(--fs-h3);}
     .work-exp-grid-image:hover
     {
         max-width: 100%;
+        max-height: 100%;
+        padding: 0%;
     }
+}
+
+/* Contacts Section */
+.contacts-grid
+{
+    display : grid;
+    grid-template-columns: 20% 20% 20% 20%;
 }
