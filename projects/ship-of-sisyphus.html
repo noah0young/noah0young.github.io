@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Noah Young | Ship of Sisyphus</title>
+        <meta name="viewport" content="width=width-device, inital-scale=1.0">
+        <link rel="stylesheet" href="../style.css">
+        <!-- Fonts -->
+
+        <!-- Tech Font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Reddit+Sans+Condensed:wght@200..900&display=swap" rel="stylesheet">
+
+        <!-- Normal Font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Orbitron:wght@400..900&family=Reddit+Sans+Condensed:wght@200..900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <section class="first-section">
+            <header>
+                <h1 class="title">Ship of Sisyphus</h1>
+            </header>
+        </section>
+        <section>
+            <h2 class="subtitle">About</h2>
+            <p class="projects-text">
+                Ship of Sisyphus is a game where you try to build a machine to climb a mountain. The game is broken up into two phases: the Build phase and Climb Phase. In the Build phase, you spend money to buy components to construct a climbing machine. Once you've finished, you go to the Climb Phase, where you watch your machine try to climb the mountain. At some point in this phase, your machine will get stuck or run out of battery. At this point, the phase will end and you will earn money for however high your machine was able to climb. Afterwards, you will be sent back to the Build Phase to repeat the addicting and fun cycle.
+            </p>
+        </section>
+        <section>
+            <h2 class="subtitle">What I Did</h2>
+            <p class="projects-text">
+                For this project, my team divided up the work into three parts: the build phase, the climb phase, and the components of the vehicle. I worked on the climbing phase of the game. This meant I worked on the generation of the level and the checks for if the phase should continue. 
+            </p>
+            <p class="projects-text">
+                The procedural generation system consisted of a 
+                <a target="_blank" href="https://github.com/noah0young/gmtk-game-jam-2024/blob/master/Assets/Scripts/Climbing/ClimbManager.cs">
+                    ClimbManager,
+                </a>
+                and
+                <a target="_blank" href="https://github.com/noah0young/gmtk-game-jam-2024/blob/master/Assets/Scripts/Climbing/ProceduralGenerator.cs">
+                    ProceduralGenerator,
+                </a>
+                . The ClimbManager placed the chunks of level and reacted to the player reaching the end of each level chunk to place the next chunk. To hide this process from the user, the game always begins by placing 7 level chunks and waits to delete old ones and place new ones until the player reaches the end of the third level chunk. This is performed by using a callback function for when the user 
+                <a target="_blank" href="https://github.com/noah0young/gmtk-game-jam-2024/blob/master/Assets/Scripts/Climbing/ProceduralBox.cs">
+                    reaches the end of a level
+                </a>
+                chunk to add a new chunk. This algorithm stops placing new chunks once the final level chunk is placed, which allows the user to reach the end of the game. As a result, there are always at most 7 level chunks active in the game at a time. 
+            </p>
+            <p class="projects-text">
+                The ProceduralGenerator was an object-oriented approach to determining which level chunks should be placed for each given area. This system worked by having the ClimbManager hold as many ProceduralGenerator objects as there were areas in the game and switching ProceduralGenerator after a set number of level chunks were completed. Every ProceduralGenerator referred to its data stored in its 
+                <a target="_blank" href="https://github.com/noah0young/gmtk-game-jam-2024/blob/master/Assets/Scripts/Climbing/ProceduralData.cs">
+                    ProceduralData, 
+                </a>
+                which determined what level chunks got placed, the random weights given to each chunk, and when this ProceduralGenerator would end. The combination of these scripts made the logic of the climbing phase.
+            </p>
+            <p class="projects-text">
+                The 
+                <a target="_blank" href="https://github.com/noah0young/gmtk-game-jam-2024/blob/master/Assets/Scripts/Climbing/ClimbingMachineManager.cs">
+                    ClimbingMachineManager 
+                </a>
+                handled the logic that determined if the climb phase should continue. This employed a heuristic algorithm that verified that the climbing machine was climbing the mountain at a predetermined rate. If it ever failed to meet that rate, it would report that to the ClimbManager which ended the climb phase.
+            </p>
+            <p class="projects-text">
+                Feel free to check it out and enjoy!
+            </p>
+        </section>
+        <section>
+            <h2 class="subtitle">Screenshots</h2>
+            <div class="projects-grid">
+                <a href="../images/ship-of-sisyphus/image1.gif">
+                    <img src="../images/ship-of-sisyphus/image1.gif" class="projects-grid-element">
+                </a>
+                <a href="../images/ship-of-sisyphus/image2.png">
+                    <img src="../images/ship-of-sisyphus/image2.png" class="projects-grid-element">
+                </a>
+                <a href="../images/ship-of-sisyphus/image3.png">
+                    <img src="../images/ship-of-sisyphus/image3.png" class="projects-grid-element">
+                </a>
+            </div>
+        </section>
+        <section>
+            <h2 class="subtitle">Play Here</h2>
+            <iframe frameborder="0" src="https://itch.io/embed/2911183?link_color=f6c663" width="552" height="167"><a href="https://redrovercat.itch.io/ship-of-sisyphus">Ship of Sisyphus by RedRoverCat, Sire inc, jasongao07, ParitoshSingh</a></iframe>
+        </section>
+    </body>
+</html>

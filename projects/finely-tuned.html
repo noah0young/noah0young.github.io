@@ -4,15 +4,52 @@
         <title>Noah Young | Finely Tuned</title>
         <meta name="viewport" content="width=width-device, inital-scale=1.0">
         <link rel="stylesheet" href="../style.css">
+        <!-- Fonts -->
+
+        <!-- Tech Font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Reddit+Sans+Condensed:wght@200..900&display=swap" rel="stylesheet">
+
+        <!-- Normal Font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Orbitron:wght@400..900&family=Reddit+Sans+Condensed:wght@200..900&display=swap" rel="stylesheet">
     </head>
     <body>
-        <header>
-            <h1 class="title">Finely Tuned</h1>
-        </header>
+        <section class="first-section">
+            <header>
+                <h1 class="title">Finely Tuned</h1>
+            </header>
+        </section>
         <section>
             <h2 class="subtitle">About</h2>
-            <p>
-                This was a project... Yay
+            <p class="projects-text">
+                Finely Tuned is a game where you tune instruments and objects from a violin to a watch, and from a piano to a fish. Each instrument is a level and completing all the minigames in that level allows the player to move on to the next. However, to fit the game's theme, the final level of the game is designed to be impossible. This was because the game is entirely based on the pun "<em>you can tune a piano but you cannot tuna fish</em>" and, thus, you cannot finish the final level The Fish. Finally, after letting the player try their best to play impossible minigames, the game will conclude and explain itself
+            </p>
+        </section>
+        <section>
+            <h2 class="subtitle">What I Did</h2>
+            <p class="projects-text">
+                I worked on most of the code for this game. This includes the code for the minigame system, most minigames, and the system of transitioning between levels. 
+            </p>
+            <p class="projects-text">
+                Starting with the minigames, most minigames were designed to be easily changed through parameters to make it simple to make multiple levels. For instance, one game I made was a 
+                <a target="_blank" href="https://github.com/noah0young/InTune/blob/main/Assets/Scripts/TuningGames/TimingGame.cs">
+                    timing minigame,
+                </a> where the player would need to click the screen or hit the spacebar when a cursor was within a target. This game contained parameters for the cursor's size, the cursor's movement speed, and the range of the target to allow every Unity instance of the game to have a different difficulty level. The same was true for the text-based rpg minigame which used objects to contain different dialogue paths and could be swapped out for different versions of the game.
+            </p>
+            <p class="projects-text">
+                The minigame system was also designed to make it easy to add in new minigames. All minigames extended the abstract class 
+                <a target="_blank" href="https://github.com/noah0young/InTune/blob/main/Assets/Scripts/TuningGames/TuningGame.cs">
+                    TuningGame,
+                </a> which standardized opening and closing games, as well as provided a method to all minigames games to declare when they have been completed.
+            </p>
+            <p class="projects-text">
+                Finally, I also worked on the main game loop, which contained a list of all instruments and would swap instruments when all of the current one's minigames have been completed. This system, combined with the previous one, allowed the game to be created in an object-oriented manner, where every instrument could contain any number of TuningGames and would know when they have been completed. This design makes the game easy to update in the future, if I ever decide to return to the project
+            </p>
+            <p class="projects-text">
+                And, if you play the game, I hope you enjoy it!
             </p>
         </section>
         <section>
@@ -21,11 +58,14 @@
                 <a href="../images/finely-tuned/image1.png">
                     <img src="../images/finely-tuned/image1.png" class="projects-grid-element">
                 </a>
-                <a href="../images/finely-tuned/image2.png">
-                    <img src="../images/finely-tuned/image2.png" class="projects-grid-element">
+                <a class="projects-grid-element" href="../images/finely-tuned/TimingGame.gif">
+                    <img src="../images/finely-tuned/TimingGame.gif" class="projects-grid-element">
                 </a>
                 <a href="../images/finely-tuned/image3.png">
                     <img src="../images/finely-tuned/image3.png" class="projects-grid-element">
+                </a>
+                <a href="../images/finely-tuned/TextRPGGame.gif">
+                    <img src="../images/finely-tuned/TextRPGGame.gif" class="projects-grid-element">
                 </a>
             </div>
         </section>

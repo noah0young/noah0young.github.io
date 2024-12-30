@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Noah Young | Abobabica</title>
+        <meta name="viewport" content="width=width-device, inital-scale=1.0">
+        <link rel="stylesheet" href="../style.css">
+        <!-- Fonts -->
+
+        <!-- Tech Font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Reddit+Sans+Condensed:wght@200..900&display=swap" rel="stylesheet">
+
+        <!-- Normal Font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Orbitron:wght@400..900&family=Reddit+Sans+Condensed:wght@200..900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <section class="first-section">
+            <header>
+                <h1 class="title">Abobabica: A Summer Internship I Won't Forget About</h1>
+            </header>
+        </section>
+        <section>
+            <h2 class="subtitle">About</h2>
+            <p class="projects-text">
+                This is a visual novel in the style of Phoenix Wright: Ace Attorney where you play as an intern who is visiting the alien planet Abobabica. Although this is a short demo of the game, the game was meant to consist of two main elements: selecting 5 pieces of evidence while interacting with the aliens and using these pieces of evidence to answer questions. The main systems that were developed for this demo were the dialogue and evidence systems.
+            </p>
+        </section>
+        <section>
+            <h2 class="subtitle">What I Did</h2>
+            <p class="projects-text">
+                I worked on all of the code for this game. The project had two notable features that I worked on: a parser and file system for determining the game's story script, as well as its use of design patterns and interfaces to make an extendable system.
+            </p>
+            <p class="projects-text">
+                First, one accomplishment from this project  was the creation of a 
+                <a target="_blank" href="https://github.com/noah0young/SpaceGameAdventure/blob/noah-branch/SpaceGameAdventure/Assets/Story/story.txt">
+                    new file type
+                </a>
+                used to declare what dialogue will be spoken in the game. The 
+                <a target="_blank" href="https://github.com/noah0young/SpaceGameAdventure/blob/noah-branch/SpaceGameAdventure/Assets/Scripts/Dialogue/ScriptParser.cs">
+                    parser
+                </a>
+                would read the file line by line and add definitions for character data and dialogue chunks. Every object from this file would contain its own unique ID that would be used to either link dialogues or declare which character was speaking in a given message. The use of IDs allowed for a dialogue system that could reuse character data and have branching dialogue paths that can loop back to previously seen dialogue chunks. The parser also ignored lines that started with “//” or were entirely blank to allow for the file to contain comments and be more readable. However, although this was a fun system to have developed, if I could restart this project today I would opt to use the json file format with a premade json parser. This is because all data stored in this file were short enough that they would have been more readable in a json file format than in a custom one.
+            </p>
+            <p class="projects-text">
+                Second, the game systems made use of design patterns and object-oriented design to be easily extendable. The class used for displaying messages used the 
+                <a target="_blank" href="https://github.com/noah0young/SpaceGameAdventure/blob/noah-branch/SpaceGameAdventure/Assets/Scripts/BasicTextTyper.cs">
+                    command-design pattern to understand the effect of tags
+                </a>
+                in the dialogue. For this demo, the only tag used was a “gain evidence” tag, which added evidence to the player's inventory. That being said, a dictionary was used to store the effect of all tags, making it easy to add a new one.
+            </p>
+            <p class="projects-text">
+                If you play it, I hope you enjoy the short piece of the adventure!
+            </p>
+        </section>
+        <section>
+            <h2 class="subtitle">Screenshots</h2>
+            <div class="projects-grid">
+                <a href="../images/finely-tuned/image1.png">
+                    <img src="../images/finely-tuned/image1.png" class="projects-grid-element">
+                </a>
+                <a class="projects-grid-element" href="../images/finely-tuned/TimingGame.gif">
+                    <img src="../images/finely-tuned/TimingGame.gif" class="projects-grid-element">
+                </a>
+                <a href="../images/finely-tuned/image3.png">
+                    <img src="../images/finely-tuned/image3.png" class="projects-grid-element">
+                </a>
+                <a href="../images/finely-tuned/TextRPGGame.gif">
+                    <img src="../images/finely-tuned/TextRPGGame.gif" class="projects-grid-element">
+                </a>
+            </div>
+        </section>
+        <section>
+            <h2 class="subtitle">Play Here</h2>
+            <iframe frameborder="0" src="https://itch.io/embed/2236588?link_color=156e0d" width="552" height="167"><a href="https://sire-inc.itch.io/demo-ababobica-a-summer-internship-i-wont-forget">Demo | Ababobica: A Summer Internship I Won't Forget Work in Progress by Sire inc, someusernameiguess</a></iframe>
+        </section>
+    </body>
+</html>
