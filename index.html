@@ -30,38 +30,14 @@
         <!-- Bio -->
         <section id="Bio" class="bio-section">
             <h2 class="subtitle">About Me</h2>
-            <div class="bio-toggle">
-                <button class="nonsense-toggle" id="nonsense-toggle">Translate English to Nonsense</button>
-            </div>
             <div class="bio-grid">
                 <img src="./images/Me.jpeg" class="bio-image">
                 <div class="bio-text" id="bio-text-in-english">
                     <p>
-                        Hi, my name is Noah. I'm a Computer Science student with a passion for making video games. I got to work at two companies using Northeastern University's co-op program to gain a year of experience before graduation! I have worked at Medtronic contributing to an R&T project using C# and Unity. I have also worked at Storm Flag Games using Typescript. Aside from video games, I enjoy drinking tea
-                    </p>
-                </div>
-                <div class="bio-text" id="bio-text-in-nonsense" hidden>
-                    <p>
-                        I went to school to learn how to breath life into pieces of ever changing paper to perform magical tasks for me using scriptures that only few know (English Translation: ... yes, that's what a software engineer does). In my free time, I also like to conjure up alternate worlds to send to people who can mess around with them for fun (English Translation: I enjoy making games)
+                        Hi, my name is Noah. I'm a Computer Science student with a passion for making video games. I got to work at Medtronic and Storm Flag Games using Northeastern University's co-op program to gain a year of experience before graduation! Aside from video games and game development, I enjoy drinking tea and fencing or running as a form of exercise!
                     </p>
                 </div>
             </div>
-            <!-- This is a fun small script to switch my about text as if it was translating it to another language -->
-            <script>
-                let preTranslationButtonText = "Translate English to Nonsense";
-                let postTranslationButtonText = "Translate Nonsense to English";
-                let bioTextInEnglish = document.getElementById("bio-text-in-english");
-                let bioTextInNonsense = document.getElementById("bio-text-in-nonsense");
-                let buttonToToggle = document.getElementById("nonsense-toggle");
-                buttonToToggle.textContent = preTranslationButtonText;
-                buttonToToggle.onclick = () => 
-                { 
-                    buttonToToggle.textContent = buttonToToggle.textContent === 
-                    preTranslationButtonText ? postTranslationButtonText : preTranslationButtonText
-                    bioTextInEnglish.hidden = !bioTextInEnglish.hidden; 
-                    bioTextInNonsense.hidden = !bioTextInNonsense.hidden; 
-                }
-            </script>
             <div class="bio-files">
                 <a href="./files/Noah resume.pdf" target="_blank"><button class="resume-button">My Resume</button></a>
             </div>
