@@ -186,7 +186,7 @@ p { font-size: var(--fs-body);}
 .edu-grid
 {
     display: grid;
-    grid-template-columns: 30% 30% 30%;
+    grid-template-columns: 40% 40%;
     column-gap: 10px;
 }
 
