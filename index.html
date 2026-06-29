@@ -1,90 +1,115 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-    <!-- Created by me with the help of tutorials -->
-    <head>
-        <title>Noah Young</title>
-        <meta name="viewport" content="width=width-device, inital-scale=1.0">
-        <link rel="stylesheet" href="style.css">
-        <!-- Fonts -->
+  <!-- Created by me with the help of tutorials -->
+  <head>
+    <title>Noah Young</title>
+    <meta name="viewport" content="width=width-device, inital-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <!-- Fonts -->
 
-        <!-- Tech Font -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Reddit+Sans+Condensed:wght@200..900&display=swap" rel="stylesheet">
+    <!-- Tech Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Reddit+Sans+Condensed:wght@200..900&display=swap"
+      rel="stylesheet"
+    />
 
-        <!-- Normal Font -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Orbitron:wght@400..900&family=Reddit+Sans+Condensed:wght@200..900&display=swap" rel="stylesheet">
+    <!-- Normal Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Orbitron:wght@400..900&family=Reddit+Sans+Condensed:wght@200..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header (with my name) -->
+    <header>
+      <section class="first-section">
+        <h1 class="title">Noah Young</h1>
+        <p class="job-title">Software Engineer</p>
+      </section>
+    </header>
 
-    </head>
-    <body>
-        <!-- Header (with my name) -->
-        <header>
-            <section class="first-section">
-                <h1 class="title">Noah Young</h1>
-                <p class="job-title">Software Engineer</p>
-            </section>
-        </header>
+    <!-- Bio -->
+    <section id="Bio" class="bio-section">
+      <h2 class="subtitle">About Me</h2>
+      <div class="bio-grid">
+        <img src="./images/Me.jpg" class="bio-image" />
+        <div class="bio-text" id="bio-text-in-english">
+          <p>
+            Hi, I'm Noah! I'm a Software Engineer who enjoys making games in my
+            free time. I also enjoy tea and coffee. I've recently been using
+            TypeScript and C# + Unity, but have confidence that I'd be able to
+            learn and work in any programming language needed for a job. If
+            you're interested in some of the games I've made, go to this
+            <a href="https://sire-inc.itch.io/" target="_blank">link</a> or
+            scroll to see more about a couple of my projects.
+          </p>
+        </div>
+      </div>
+      <div class="bio-files">
+        <a href="./files/Noah resume.pdf" target="_blank"
+          ><button class="resume-button">My Resume</button></a
+        >
+      </div>
+    </section>
 
-        <!-- Bio -->
-        <section id="Bio" class="bio-section">
-            <h2 class="subtitle">About Me</h2>
-            <div class="bio-grid">
-                <img src="./images/Me.jpg" class="bio-image">
-                <div class="bio-text" id="bio-text-in-english">
-                    <p>
-                        Hi, my name is Noah. I'm a Computer Science student at Northeastern University. In my free time I enjoy making video games and posting them to <a href="https://sire-inc.itch.io/" target="_blank">itch.io</a>. I got to work at Medtronic and Storm Flag Games using Northeastern University's co-op program to gain a year of experience before graduation! Aside from video games and game development, I enjoy drinking tea and fencing or running as a form of exercise!
-                    </p>
-                </div>
+    <!-- Projects -->
+    <section id="Projects" class="projects-section">
+      <h2 class="subtitle">Projects</h2>
+      <div class="projects-grid">
+        <div class="projects-grid-element">
+          <a href="./projects/ship-of-sisyphus.html"
+            ><img src="./images/ShipOfSisyphus.png" class="projects-grid-image"
+          /></a>
+        </div>
+        <div class="projects-grid-element">
+          <a href="./projects/finely-tuned.html"
+            ><img src="./images/FinelyTuned.png" class="projects-grid-image"
+          /></a>
+        </div>
+        <div class="projects-grid-element">
+          <a href="./projects/abobabica.html"
+            ><img src="./images/Abobabica.png" class="projects-grid-image"
+          /></a>
+        </div>
+        <div class="projects-grid-element">
+          <a href="https://sire-inc.itch.io/">
+            <div class="projects-grid-image">
+              <button class="work-exp-grid-button">And More</button>
             </div>
-            <div class="bio-files">
-                <a href="./files/Noah resume.pdf" target="_blank"><button class="resume-button">My Resume</button></a>
-            </div>
-        </section>
+          </a>
+        </div>
+      </div>
+    </section>
 
-        <!-- Projects -->
-        <section id="Projects" class="projects-section">
-            <h2 class="subtitle">Projects</h2>
-            <div class="projects-grid">
-                <div class="projects-grid-element">
-                    <a href="./projects/ship-of-sisyphus.html"><img src="./images/ShipOfSisyphus.png" class="projects-grid-image"></a>
-                </div>
-                <div class="projects-grid-element">
-                    <a href="./projects/finely-tuned.html"><img src="./images/FinelyTuned.png" class="projects-grid-image"></a>
-                </div>
-                <div class="projects-grid-element">
-                    <a href="./projects/abobabica.html"><img src="./images/Abobabica.png" class="projects-grid-image"></a>
-                </div>
-                <div class="projects-grid-element">
-                    <a href="https://sire-inc.itch.io/">
-                        <div class="projects-grid-image">
-                            <button class="work-exp-grid-button">And More</button>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </section>
+    <!-- Education -->
+    <section id="Education" class="edu-section">
+      <h2 class="subtitle">Education</h2>
+      <div class="edu-grid">
+        <div class="edu-grid-element">
+          <a href="./education/northeastern.html"
+            ><img src="./images/Northeastern.jpg" class="edu-grid-image"
+          /></a>
+        </div>
+      </div>
+    </section>
 
-        <!-- Education -->
-        <section id="Education" class="edu-section">
-            <h2 class="subtitle">Education</h2>
-            <div class="edu-grid">
-                <div class="edu-grid-element">
-                    <a href="./education/northeastern.html"><img src="./images/Northeastern.jpg" class="edu-grid-image"></a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact -->
-        <section id="Contact" class="contact-section">
-            <h2 class="subtitle">Contact Me</h2>
-            <div class="contacts-grid">
-                <a class="link" href="mailto:drnoahyoung@gmail.com">drnoahyoung@gmail.com</a>
-                <a class="link" href="tel:5165927401">(516) 592 - 7401</a>
-                <a class="link" href="https://www.linkedin.com/in/noah-d-young/">LinkedIn</a>
-                <a class="link" href="https://sire-inc.itch.io/">itch.io</a>
-            </div>
-        </section>
-    </body>
+    <!-- Contact -->
+    <section id="Contact" class="contact-section">
+      <h2 class="subtitle">Contact Me</h2>
+      <div class="contacts-grid">
+        <a class="link" href="mailto:drnoahyoung@gmail.com"
+          >drnoahyoung@gmail.com</a
+        >
+        <a class="link" href="tel:5165927401">(516) 592 - 7401</a>
+        <a class="link" href="https://www.linkedin.com/in/noah-d-young/"
+          >LinkedIn</a
+        >
+        <a class="link" href="https://sire-inc.itch.io/">itch.io</a>
+      </div>
+    </section>
+  </body>
 </html>
